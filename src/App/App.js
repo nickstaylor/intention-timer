@@ -1,11 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Header from '../Header/Header'
+import Form from '../Form/Form'
+import Timer from '../Timer/Timer'
+import Activities from '../Activities/Activities'
 
 function App() {
+  const [showTimer, setShowTimer] = useState(false)
+
   return (
+  
     <div className="App">
-    Intention Timer
+        <Header />
+        <Form />
+        <Activities />
+      {
+        showTimer && <Timer />
+      }
     </div>
   );
 }

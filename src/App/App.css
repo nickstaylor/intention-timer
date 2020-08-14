@@ -9,7 +9,7 @@
   display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 10% auto;
+  grid-template-rows: 9% auto;
   grid-template-areas:
   "h h h"
   "l l r";

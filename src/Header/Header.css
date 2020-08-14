@@ -3,7 +3,7 @@ header {
   display: flex;
   justify-content: center;
   background-color: #46424D;
-  align-items: center;  /* margin-top: 10px; */
+  align-items: center;
   font-size: 1.5em;
-  /* height: 8% */
+  text-transform: uppercase;
 }

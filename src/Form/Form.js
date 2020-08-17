@@ -13,8 +13,8 @@ const Form = () => {
   const [description, updateDescription] = useState('')
   const [minutes, updateMinutes] = useState('')
   const [seconds, updateSeconds] = useState('')
-  const [minutesError, updateMinutesError] = useState(true)
-  const [descError, updateDescError] = useState(true)
+  const [minutesError, updateMinutesError] = useState(false)
+  const [descError, updateDescError] = useState(false)
 
   return (
     <div className="form-timer-container">
@@ -32,6 +32,7 @@ const Form = () => {
           <input
             type="text"
             name="description"
+            maxLength="60"
             value={description}
             onChange={e => updateDescription(e.target.value)}
           />

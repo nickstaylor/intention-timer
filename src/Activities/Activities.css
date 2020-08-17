@@ -1,0 +1,17 @@
+.activities-container {
+  grid-area: r;
+  background-color: #2b2733;
+}
+
+.no-activity-msg {
+  margin-left: 5%;
+  text-align: center;
+}
+
+.activities-inner-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5%;
+}
+
+

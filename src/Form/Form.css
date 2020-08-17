@@ -1,0 +1,109 @@
+.form-timer-container {
+  grid-area: l;
+  background-color: #2B2733;
+}
+
+.form-timer-inner-container {
+  background-color: #46424D;
+  border-radius: 5px;
+  box-shadow: 3px 3px #26222D;
+  margin: 0 5%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 8%
+}
+
+.menu-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-buttons button {
+  width: 27%;
+  height: 4em;
+  border: 2px solid lightgray;
+  background-color: #46424D;
+  font-size: 1.2em;
+  color:  #CBC9CF;
+  outline: none;
+  text-align: center;
+}
+.menu-buttons img {
+  height: 30px;
+  width: 30px;
+  display: block;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 2px
+}
+
+.activity-description {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-description input, 
+.min-sec-inputs input {
+  background-color: #46424D;
+  outline: none;
+  margin-top: 2%;
+  border: none;
+  border-bottom: 2px solid lightgray;
+  font-size: 1.2em;
+  color: #CBC9CF;
+}
+
+.minutes-seconds {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10%;
+}
+
+.minutes-seconds-error {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+.min-sec-inputs {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.start-activity-btn {
+  margin-top: 8%;
+  display: flex;
+  justify-content: flex-end
+}
+.start-activity-btn-error {
+  margin-top: 0%;
+  display: flex;
+  justify-content: flex-end
+}
+
+
+.start-activity {
+  border-radius: 5px;
+  width: 30%;
+  text-transform: uppercase;
+  padding: 1%;
+  outline: none;
+}
+
+.min-error img, 
+.desc-error img {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin-right: 2%;
+}
+
+.min-error, 
+.desc-error {
+  font-size: .8em;
+  align-items: center;
+}
+

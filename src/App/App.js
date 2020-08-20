@@ -16,14 +16,14 @@ function App() {
   {
     type: 'exercise', description: 'Weight Liftiing', min: 45, sec: 0, date: '08/15/20', id: 3, favorite: false
   }]
-  
+
   const [activities, setActivities] = useState(activityData)
   const [currentActivity, setCurrentActivity] = useState('')
 
   const beginActivity = (activity) => {
     setCurrentActivity(activity)
   }
-  
+
   const logActivity = () => {
     let updatedActivities = [...activities, currentActivity]
     setActivities(updatedActivities)
@@ -36,10 +36,15 @@ function App() {
   }
 
   return (
-  
+
     <div className="App">
-        <Header />
-      <Form beginActivity={beginActivity} />
+      <Header />
+
+      {currentActivity ?
+       <TimerPage activity={ currentActivity } logActivity={ logActivity }/> :
+       <Form beginActivity={beginActivity} />
+      }
+
       {!activities ?
         <section class="activities-container">
           <h2>Past Activities</h2>
@@ -48,9 +53,7 @@ function App() {
         </section> :
         <Activities activities={activities} deleteActivity={deleteActivity} />
       }
-      {
-        currentActivity && <TimerPage activity={ currentActivity } logActivity={ logActivity }/>
-      }
+
     </div>
   );
 }

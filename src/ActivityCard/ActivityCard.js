@@ -1,7 +1,7 @@
 import React from 'react'
 import './ActivityCard.css'
 import heartOutline from '../images/heart-outline.svg'
-import heartFilled from '../images/heart-filled.svg'
+// import heartFilled from '../images/heart-filled.svg'
 import deleteIcon from '../images/delete.svg'
 
 
@@ -28,7 +28,7 @@ const ActivityCard = ({activity}) => {
             <img className="delete-img" src={deleteIcon} onClick={() => handleDelete(activity.id)} alt="delete"/>
           </section>
         </section>
-      </div>      
+      </div>
     </div>
   )
 }

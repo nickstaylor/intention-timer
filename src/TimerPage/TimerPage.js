@@ -1,10 +1,12 @@
 import React from 'react'
 import './TimerPage.css'
 
-const TimerPage = () => {
+const TimerPage = ({activity, logActivity}) => {
+  console.log('currentActivity', activity);
+
   return (
-    <div>
-   I'm the TimerPage!
+    <div className="form-timer-container">
+      <h2>Current Activity</h2>
     </div>
   )
 }

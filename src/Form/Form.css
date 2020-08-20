@@ -29,13 +29,15 @@
   outline: none;
   text-align: center;
 }
+
 .menu-buttons img {
   height: 30px;
   width: 30px;
   display: block;
   text-align: center;
   margin: auto;
-  padding-bottom: 2px
+  padding-bottom: 2px;
+  pointer-events: none;
 }
 
 .activity-description {
@@ -44,7 +46,7 @@
   flex-direction: column;
 }
 
-.activity-description input, 
+.activity-description input,
 .min-sec-inputs input {
   background-color: #46424D;
   outline: none;
@@ -93,7 +95,7 @@
   outline: none;
 }
 
-.min-error img, 
+.min-error img,
 .desc-error img {
   display: inline-block;
   height: 15px;
@@ -101,9 +103,24 @@
   margin-right: 2%;
 }
 
-.min-error, 
+.min-error,
 .desc-error {
   font-size: .8em;
   align-items: center;
+  color: #EFB7EC
 }
 
+.menu-buttons .study-outline {
+  border: 2px solid #B3FD78;
+  color: #B3FD78;
+}
+
+.menu-buttons .meditate-outline {
+  border: 2px solid #C278FD;
+  color :#C278FD;
+}
+
+.menu-buttons .exercise-outline {
+  border: 2px solid #FD8078;
+  color: #FD8078;
+}

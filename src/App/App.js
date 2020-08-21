@@ -14,11 +14,19 @@ function App() {
     type: 'study', description: 'Practice React Hooks', min: 25, sec: 0, date: '08/16/20', id: 2, favorite: true
   },
   {
-    type: 'exercise', description: 'Weight Liftiing', min: 45, sec: 0, date: '08/15/20', id: 3, favorite: false
+    type: 'exercise', description: 'Weight Lifting', min: 45, sec: 0, date: '08/15/20', id: 3, favorite: false
   }]
 
+  let sampleActivity = {date: "8/20/2020",
+                        description: "Learn Express",
+                        favorite: false,
+                        id: 1597973827053,
+                        min: 45,
+                        sec: 0,
+                        type: "study"}
+
   const [activities, setActivities] = useState(activityData)
-  const [currentActivity, setCurrentActivity] = useState('')
+  const [currentActivity, setCurrentActivity] = useState(sampleActivity)
 
   const beginActivity = (activity) => {
     setCurrentActivity(activity)
@@ -41,7 +49,7 @@ function App() {
       <Header />
 
       {currentActivity ?
-       <TimerPage activity={ currentActivity } logActivity={ logActivity }/> :
+       <TimerPage activity={currentActivity} logActivity={logActivity}/> :
        <Form beginActivity={beginActivity} />
       }
 

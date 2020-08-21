@@ -21,7 +21,7 @@ function App() {
                         description: "Learn Express",
                         favorite: false,
                         id: 1597973827053,
-                        min: 1,
+                        min: 0,
                         sec: 3,
                         type: "study"}
 
@@ -33,9 +33,10 @@ function App() {
   }
 
   const logActivity = () => {
-    let updatedActivities = [...activities, currentActivity]
+    console.log(currentActivity);
+    let updatedActivities = [currentActivity, ...activities]
     setActivities(updatedActivities)
-    setCurrentActivity('')
+    // setCurrentActivity('')
   }
 
   const deleteActivity = (id) => {
@@ -49,7 +50,10 @@ function App() {
       <Header />
 
       {currentActivity ?
-       <TimerPage activity={currentActivity} logActivity={logActivity}/> :
+       <TimerPage
+       activity={currentActivity}
+       logActivity={logActivity}
+       setCurrentActivity={setCurrentActivity}/> :
        <Form beginActivity={beginActivity} />
       }
 

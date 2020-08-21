@@ -21,8 +21,8 @@ function App() {
                         description: "Learn Express",
                         favorite: false,
                         id: 1597973827053,
-                        min: 45,
-                        sec: 0,
+                        min: 1,
+                        sec: 3,
                         type: "study"}
 
   const [activities, setActivities] = useState(activityData)

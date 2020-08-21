@@ -36,6 +36,7 @@
 }
 
 .timer-display {
+  font-family: sans-serif;
   font-size: 2.5em;
   color: white;
 }
@@ -53,13 +54,25 @@
 }
 
 .study-outline {
-  border: 2px solid #B3FD78;
+  border: 3px solid #B3FD78;
+}
+
+.study-header {
+  color: #B3FD78
 }
 
  .meditate-outline {
-  border: 2px solid #C278FD;
+  border: 3px solid #C278FD;
+}
+
+.meditate-header {
+  color: #C278FD
 }
 
  .exercise-outline {
-  border: 2px solid #FD8078;
+  border: 3px solid #FD8078;
+}
+
+.exercise-header {
+  color: #FD8078
 }

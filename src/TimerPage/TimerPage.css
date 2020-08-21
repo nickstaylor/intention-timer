@@ -1,4 +1,5 @@
 .timer-inner-container {
+  position: relative;
   background-color: #46424D;
   border-radius: 5px;
   box-shadow: 3px 3px #26222D;
@@ -18,7 +19,7 @@
   align-items: center;
   width: 45%;
   height: 80%;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 
 .top-timer-column-box {
@@ -51,6 +52,7 @@
   border-radius: 50%;
   display: block;
   outline: none;
+  text-transform: uppercase;
 }
 
 .study-outline {
@@ -75,4 +77,32 @@
 
 .exercise-header {
   color: #FD8078
+}
+
+.log-activity-btn {
+  font-size: 1.0em;
+  width: 30%;
+  height: 6%;
+  margin-bottom: 7%;
+  text-transform: uppercase;
+  border-radius: 4px;
+  outline: none;
+}
+
+.new-activity-btn {
+  font-size: 1.0em;
+  width: 50%;
+  height: 9%;
+  margin-top: 10%;
+  text-transform: uppercase;
+  border-radius: 4px;
+  outline: none;
+}
+
+.replay-img {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 10px;
+  right: 10px;
 }

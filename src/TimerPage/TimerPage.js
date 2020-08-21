@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import './TimerPage.css'
+import replay from '../images/replay.svg'
 
-const TimerPage = ({activity, logActivity}) => {
+const TimerPage = ({activity, logActivity, setCurrentActivity}) => {
   console.log('currentActivity', activity);
   const [timerCompleted, setTimerCompleted] = useState(false)
   const [timerActive, setTimerActive] = useState(false)
@@ -12,7 +13,7 @@ const TimerPage = ({activity, logActivity}) => {
   useEffect(() => {
     let timer = null;
     if (timerActive) {
-    interval = setInterval(() => {
+    timer = setInterval(() => {
         setSeconds(seconds => seconds - 1);
       }, 1000);
       if (minutes && seconds < 0){
@@ -35,20 +36,31 @@ const TimerPage = ({activity, logActivity}) => {
   }
 
   const completeActivity = () => {
-    console.log('complete activity');
+    logActivity()
+    setActivityLogged(true)
+  }
+
+  const reloadActivity = () => {
+    logActivity()
+    setTimerCompleted(false)
+    setMinutes(activity.min)
+    setSeconds(activity.sec)
   }
 
   return (
     <div className="form-timer-container">
       <h2>Current Activity : <span className={`${activity.type}-header`}>{activity.type}</span></h2>
       <section className="timer-inner-container">
+      {!activityLogged ?
+        <>
         <section className="timer-column-box">
+          {timerCompleted && <img onClick={reloadActivity} className="replay-img" src={replay} alt="replay" />}
           <div className="top-timer-column-box">
             <p>{activity.description}</p>
             <p className="timer-display">{minutes}:{seconds < 10 ? '0' + seconds : seconds}</p>
           </div>
           <button className={`timer-circle-btn ${activity.type}-outline`} onClick={activateTimer}>
-          {timerCompleted ? 'Complete!' : (timerActive ? 'Pause' : 'Start')}
+          {timerCompleted ? 'congrats!' : (timerActive ? 'pause' : 'start')}
           </button>
         </section>
         {timerCompleted &&
@@ -56,7 +68,15 @@ const TimerPage = ({activity, logActivity}) => {
           Log Activity
           </button>
         }
+        </> :
+
+        <button className="new-activity-btn" onClick={()=> setCurrentActivity('')}>
+        Create a new activity
+        </button>
+
+      }
       </section>
+
     </div>
   )
 }

@@ -5,7 +5,7 @@ import heartOutline from '../images/heart-outline.svg'
 import deleteIcon from '../images/delete.svg'
 
 
-const ActivityCard = ({activity}) => {
+const ActivityCard = ({activity, deleteActivity}) => {
 
   const handleDelete = (id) => {
   console.log(id)
@@ -25,7 +25,7 @@ const ActivityCard = ({activity}) => {
           <p className="activity-desc">{activity.description}</p>
           <section className="activity-btns">
             <img src={heartOutline} alt="favorite" />
-            <img className="delete-img" src={deleteIcon} onClick={() => handleDelete(activity.id)} alt="delete"/>
+            <img className="delete-img" src={deleteIcon} onClick={() => deleteActivity(activity.id)} alt="delete"/>
           </section>
         </section>
       </div>

@@ -26,7 +26,7 @@ function App() {
                         type: "study"}
 
   const [activities, setActivities] = useState(activityData)
-  const [currentActivity, setCurrentActivity] = useState(sampleActivity)
+  const [currentActivity, setCurrentActivity] = useState('')
 
   const beginActivity = (activity) => {
     setCurrentActivity(activity)
@@ -57,7 +57,7 @@ function App() {
        <Form beginActivity={beginActivity} />
       }
 
-      {!activities ?
+      {!activities.length ?
         <section class="activities-container">
           <h2>Past Activities</h2>
           <p className="no-activity-msg">You haven't logged any activities yet.</p>

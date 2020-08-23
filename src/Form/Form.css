@@ -3,7 +3,7 @@
   background-color: #2B2733;
 }
 
-.form-timer-inner-container {
+.form-inner-container {
   background-color: #46424D;
   border-radius: 5px;
   box-shadow: 3px 3px #26222D;
@@ -78,12 +78,18 @@
 .start-activity-btn {
   margin-top: 8%;
   display: flex;
-  justify-content: flex-end
+  justify-content: flex-end;
+  text-transform: uppercase;
+  height: 6%;
+  font-size: 1.0em;
 }
 .start-activity-btn-error {
   margin-top: 0%;
   display: flex;
-  justify-content: flex-end
+  justify-content: flex-end;
+  text-transform: uppercase;
+  height: 6%;
+  font-size: 1.0em;
 }
 
 

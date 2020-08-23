@@ -10,13 +10,14 @@ import ActivityCard from '../ActivityCard/ActivityCard'
 // import studyActive from '../images/study-active.svg'
 
 
-const Activities = ({ activities }) => {
+const Activities = ({ activities, deleteActivity }) => {
 
   let displayedActivities = activities.map((activity, i) => {
     return (
       <ActivityCard
         key={i}
         activity={activity}
+        deleteActivity={deleteActivity}
       />
     )
   })

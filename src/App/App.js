@@ -14,8 +14,16 @@ function App() {
     type: 'study', description: 'Practice React Hooks', min: 25, sec: 0, date: '08/16/20', id: 2, favorite: true
   },
   {
-    type: 'exercise', description: 'Weight Liftiing', min: 45, sec: 0, date: '08/15/20', id: 3, favorite: false
+    type: 'exercise', description: 'Weight Lifting', min: 45, sec: 0, date: '08/15/20', id: 3, favorite: false
   }]
+
+  let sampleActivity = {date: "8/20/2020",
+                        description: "Learn Express",
+                        favorite: false,
+                        id: 1597973827053,
+                        min: 0,
+                        sec: 3,
+                        type: "study"}
 
   const [activities, setActivities] = useState(activityData)
   const [currentActivity, setCurrentActivity] = useState('')
@@ -25,9 +33,10 @@ function App() {
   }
 
   const logActivity = () => {
-    let updatedActivities = [...activities, currentActivity]
+    console.log(currentActivity);
+    let updatedActivities = [currentActivity, ...activities]
     setActivities(updatedActivities)
-    setCurrentActivity('')
+    // setCurrentActivity('')
   }
 
   const deleteActivity = (id) => {
@@ -41,11 +50,14 @@ function App() {
       <Header />
 
       {currentActivity ?
-       <TimerPage activity={ currentActivity } logActivity={ logActivity }/> :
+       <TimerPage
+       activity={currentActivity}
+       logActivity={logActivity}
+       setCurrentActivity={setCurrentActivity}/> :
        <Form beginActivity={beginActivity} />
       }
 
-      {!activities ?
+      {!activities.length ?
         <section class="activities-container">
           <h2>Past Activities</h2>
           <p className="no-activity-msg">You haven't logged any activities yet.</p>

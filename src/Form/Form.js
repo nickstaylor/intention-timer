@@ -17,10 +17,8 @@ const Form = ({beginActivity}) => {
   const [minutesError, updateMinutesError] = useState(false)
   const [secondsError, updateSecondsError] = useState(false)
   const [descError, updateDescError] = useState(false)
-  const [validatedForm, updateValidatedForm] = useState(false)
 
   const handleChange = (e) => {
-    // console.log(e.target);
     const {name, value} = e.target
     let newValue = value.replace(/[^0-9]/, '')
     if (name === 'minutes'){
@@ -56,8 +54,8 @@ const Form = ({beginActivity}) => {
   const changeToTimer = () => {
     beginActivity({type: selected,
                   description: description,
-                  min: minutes,
-                  sec: seconds || 0,
+                  min: parseInt(minutes),
+                  sec: parseInt(seconds) || 0,
                   date: moment().format('l'),
                   id: Date.now(),
                   favorite: false})
@@ -66,7 +64,7 @@ const Form = ({beginActivity}) => {
   return (
     <div className="form-timer-container">
       <h2>New Activity</h2>
-      <section className="form-timer-inner-container">
+      <section className="form-inner-container">
         <h3>Select A Category :</h3>
         <section className="menu-buttons" >
           <button className={selected === 'study'? "study-outline" : "" } id="study"

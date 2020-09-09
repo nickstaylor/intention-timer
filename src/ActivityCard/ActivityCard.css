@@ -48,20 +48,39 @@
   height: 50%
 }
 
-.ac-bottom img {
-  height: 25px;
+
+/* .ac-bottom img {
+  height: 21px;
   width: 25px;
-  /* padding-right: 5px */
+  padding-left: 5px;
+  padding-top: 5px
+} */
+
+.ac-bottom .heart {
+  height: 24px;
+  width: 22px;
+  padding-left: 5px;
+  /* margin-top: 5px; */
 }
 
 .ac-bottom .delete-img {
-  height: 24px;
-  width: 21px;
+  height: 23px;
+  width: 18px;
   padding-left: 5px
+}
+
+.ac-bottom .replay-image {
+    height: 23px;
+    width: 18px;
+    padding-left: 5px
 }
 
 .activity-btns {
   padding-right: 9px
+}
+
+.activity-btns img {
+  cursor: pointer;
 }
 
 .exercise {
